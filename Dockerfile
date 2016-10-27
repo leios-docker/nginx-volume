@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 # Install Nginx
 RUN \
     apt-get update && \
-    apt-get install -y nginx php5-fpm php5-mysql && \
+    apt-get install -y nginx php5-fpm php5-mysql php5-sqlite && \
     rm -rf /var/lib/apt/lists/*
 
 COPY files/nginx.conf /etc/nginx/nginx.conf
